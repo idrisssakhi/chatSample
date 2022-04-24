@@ -1,4 +1,4 @@
-# chatSimple
+# chatSample
 a react native sample for a chat screen, with custom components and Awake module included.
 
 # Requirement
