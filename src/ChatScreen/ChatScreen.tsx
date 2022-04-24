@@ -7,9 +7,9 @@ import {
   ListRenderItemInfo,
   ActivityIndicator,
 } from 'react-native';
+
 import {Comment} from '../Shared/Api';
 import {myEmail} from '../Shared/Constants';
-
 import {useCommentsLogic} from '../Shared/Logic';
 import {activateAwakeMode, deactivateAwakeMode} from '../Shared/Native';
 import {ChatWrapper} from '../Shared/UI';
@@ -22,7 +22,7 @@ const CommentCard = memo(({comment}: {comment: Comment}) => {
         styles.commentCardContainer,
         isMyEmail && styles.myCommentCardContainer,
       ]}>
-      <Text>{comment.body}</Text>
+      <Text style={styles.textStyle}>{comment.body}</Text>
     </View>
   );
 });
@@ -88,14 +88,19 @@ const styles = StyleSheet.create({
   commentCardContainer: {
     maxWidth: '80%',
     marginVertical: 2,
-    borderRadius: 6,
-    backgroundColor: '#F5F7FB',
+    borderRadius: 12,
+    backgroundColor: '#333333',
     paddingHorizontal: 6,
     paddingVertical: 10,
   },
   myCommentCardContainer: {
     backgroundColor: '#0085f2',
     alignSelf: 'flex-end',
+  },
+  textStyle: {
+    fontSize: 16,
+    letterSpacing: 0.25,
+    color: 'white',
   },
   activityIndicator: {
     marginTop: 16,

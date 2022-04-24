@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     display: 'flex',
     width: 45,
     height: 45,
-    backgroundColor: '#FFFFFF',
     marginLeft: 8,
   },
 });

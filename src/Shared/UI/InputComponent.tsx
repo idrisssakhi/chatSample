@@ -33,7 +33,6 @@ export const InputComponent = ({onSend, testID}: Props) => {
         style={styles.textInputContainer}
       />
       <IconButton
-        noPadding
         onPress={onSubmit}
         icon={
           sendButtonDisabled
